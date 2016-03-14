@@ -1,0 +1,26 @@
+{
+  "name": "mdtohtml",
+  "version": "1.0.0",
+  "description": "It converts markdown style text to HTML.",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec/"
+  },
+  "keywords": [
+    "markdown",
+    "html",
+    "parser"
+  ],
+  "author": "Noman Yaqub",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^3.1.2",
+    "hapi": "^13.0.0",
+    "inert": "^3.2.0",
+    "jasmine-node": "^1.14.5",
+    "joi": "^8.0.4",
+    "mongojs": "^2.3.0",
+    "node-uuid": "^1.4.7",
+    "request": "^2.69.0"
+  }
+}
