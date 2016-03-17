@@ -277,28 +277,3 @@ function convertInlineTags(string) {
 	string = makeItalicWithStarTag(string);
 	return string;
 }
-
-function parseInlineTagsXXX(string) {
-	string = string.replace(/!\[([^\]]*)\]\(([^(]+)\)/g, '<img alt="$1" src="$2">')
-	.replace(/\[([^\]]+)\]\(([^(]+)\)/g, '$1'.link('$2'))
-	.replace(/([^"])(https?:\/\/([^\s"]+))/g, '$1'+'$3'.link('$1$2'))
-	.replace(/^(https?:\/\/([^\s"]+))/g, '$2'.link('$1'))
-	.replace(/\`([^`]+)\`/g, '<code>$1</code>')
-	.replace(/~~([^*]+)~~/g, '<strike>$1</strike>')
-	
-	// according to pdf
-	//html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-
-	//according to github
-	.replace(/__([^_]+)__/g, '<b>$1</b>')
-	// if pdf - comment out below line
-	.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
-
-	// according to pdf
-	//html= html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-
-	.replace(/_([^_]+)_/g, '<i>$1</i>')
-	.replace(/\*([^*]+)\*/g, '<i>$1</i>');
-
-	return string;
-}
